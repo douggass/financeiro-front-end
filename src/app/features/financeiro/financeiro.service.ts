@@ -47,7 +47,6 @@ export class FinanceiroService {
       { headers: new HttpHeaders({ 'Content-type': 'application/json; charset=utf-8' }) })
       .pipe(
         map((response: DefaultResponse) => {
-          console.log(response);
           if (response.status.codigo == '0') {
             return response.data;
           } else if (response.status.mensagem) {
